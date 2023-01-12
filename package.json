@@ -1,0 +1,19 @@
+{
+  "name": "cf",
+  "version": "1.0.0",
+  "description": "We are using a serverless function, where our software runs once it has a \"trigger\" to \"wake up\". How? Using a function. Every function must have a trigger on Google Cloud. Therefore, we have the following possible triggers: - Event-driven functions     - Background functions     - CloudEvent functions - HTTP functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrongbyte-lab/cf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wrongbyte-lab/cf/issues"
+  },
+  "homepage": "https://github.com/wrongbyte-lab/cf#readme"
+}
