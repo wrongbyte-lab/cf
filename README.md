@@ -48,5 +48,6 @@ gcloud functions deploy $FN_NAME \
 
 The important part is the `entry-point` flag. It specifies **which function** is the entry point. Google will lookup in our `index.js` to find it.
 
-Another interesting flag is the `allow-unauthenticated`. Without this flag, we would only be able to invoke our function if we made a request using a token from an account that has the `roles/cloudfunction.functions.invoker` permission. 
-**Note:** to successfully use this flag, you need to have the `cloudfunctions.functions.setIamPolicy` permission, since what `--allow-unauthenticated` does is basically set a IAM policy for your cloud function, enabling allUsers to invoke it.
+Another interesting flag is the `allow-unauthenticated`. Without this flag, we would only be able to invoke our function if we made a request using a token from an account that has the `roles/cloudfunction.functions.invoker` permission.
+
+**Note:** to successfully use this flag, you need to have the `cloudfunctions.functions.setIamPolicy` permission, since what `--allow-unauthenticated` does is basically to set a IAM policy for your cloud function, enabling allUsers to invoke it.
