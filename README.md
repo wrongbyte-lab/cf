@@ -14,7 +14,7 @@ First, you need to have Google SDK installed in your machine. Once you have it, 
 Once you have this basic setup, let's start.
 
 ### Writing a cloud function
-Let's use a javascript function here. I choose to use a **HTTP trigger**. It means that **our function will be triggered every time we receive a HTTP request to its URL**.
+Let's use a javascript function here. I choose to use a **HTTP trigger**. It means that **our function will be triggered every time we receive a HTTP request to the URL assigned to it**.
 
 > By default, Cloud Functions attempts to load source code from a file named index.js at the root of your function directory. To specify a different main source file, use the main field in your package.json file.
 
@@ -51,3 +51,7 @@ The important part is the `entry-point` flag. It specifies **which function** is
 Another interesting flag is the `allow-unauthenticated`. Without this flag, we would only be able to invoke our function if we made a request using a token from an account that has the `roles/cloudfunction.functions.invoker` permission.
 
 **Note:** to successfully use this flag, you need to have the `cloudfunctions.functions.setIamPolicy` permission, since what `--allow-unauthenticated` does is basically to set a IAM policy for your cloud function, enabling allUsers to invoke it.
+
+So, to deploy, we run `./deploy.sh`. In the output of the commands, you'll se the URL that GCP assigned to your function.
+
+Go to it using your browser, and you'll be able to see "Hello World" printed in your screen.
