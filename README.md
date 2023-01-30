@@ -1,5 +1,5 @@
 ## Deploying a function on Google Cloud
-We are using a serverless function, where our software runs once it has a "trigger" to "wake up". How? Using a function.
+We are using a serverless function, which means our software runs once it has a "trigger" to "wake up". How? Using a function.
 Every function must have a trigger on Google Cloud. Therefore, we have the following possible triggers:
 - Event-driven functions
     - Background functions
