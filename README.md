@@ -1,10 +1,7 @@
-## Deploying a function on Google Cloud
-We are using a serverless function, which means our software runs once it has a "trigger" to "wake up". How? Using a function.
-Every function must have a trigger on Google Cloud. Therefore, we have the following possible triggers:
-- Event-driven functions
-    - Background functions
-    - CloudEvent functions
-- HTTP functions
+A cloud function is a single unit of code that can be executed in response to a specific event. In the context of serverless architecture, cloud functions are a way of deploying and running small pieces of code without the need for managing infrastructure. This can greatly simplify the process of building and deploying applications. So, let's learn how to deploy a simple function in Google Cloud Platform.
+
+Every function must have a trigger, which is the specific event that calls the function and makes our application "wake up". 
+We can have event triggers or HTTP triggers, but I choose to use HTTP triggers for this tutorial.
 
 ### How to do it, step by step
 First, you need to have Google SDK installed in your machine. Once you have it, authenticate to your account using
@@ -40,7 +37,6 @@ In the code below,
 gcloud functions deploy $FN_NAME \
     --entry-point=$FN_ENTRY_POINT \
     --runtime=nodejs16 \
-    --source=. \
     --region=us-central1 \
     --trigger-http \
     --allow-unauthenticated
